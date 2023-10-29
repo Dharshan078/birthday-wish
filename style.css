@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'MADE Evolve Sans Bold';
+    src: url('file:///C:/Users/sivad/OneDrive/Desktop/Birthday/EvolveBold.woff') format('woff');
+    font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+
+body {
+    font-family: 'MADE Evolve Sans Bold', sans-serif;
+    text-align: center;
+    background-color: #441859;
+    display: grid;
+    height: auto;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    flex: 1;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    padding: 10px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: 'MADE Evolve Sans Bold', sans-serif;
+    text-align: center;
+    
+    letter-spacing: 5px;
+    color: transparent; /* Make the text transparent to hide it initially */
+    background-image: linear-gradient(45deg, #f1ff72, #38d140, #e3afbc, #82f0ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: coolText 1s linear infinite;
+}
+
+@keyframes coolText {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+
+#timer {
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.7em;
+    letter-spacing: 5px;
+    margin-top: 25px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 10px;
+    width: 80px;
+    border-radius: 10px;
+    animation: scaleIn 1s ease-in-out;
+}
+
+
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.days {
+    background: #EF2F3C;
+    margin: 20px;
+}
+
+.hours {
+    background: #ffffff;
+    color: #183059;
+    margin: 20px;
+}
+
+.minutes {
+    background: #276FBF;
+    margin: 20px;
+}
+
+.seconds {
+    background: #F0A202;
+    margin: 15px;
+}
+
+.numbers {
+    font-family: 'MADE Evolve Sans Bold', sans-serif;
+    color: #36004f;
+    font-size: 2em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.white .string {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.red .string {
+    background: #EF2F3C;
+    border: 1px solid #EF2F3C;
+}
+
+.blue .string {
+    background: #276FBF;
+    border: 1px solid #276FBF;
+}
+
+.string {
+    position: absolute;
+    height: 70px;
+    width: 1px;
+    left: 48%;
+    right: 48%;
+    top: 100%;
+    z-index: -1;
+}
+
+.custom-footer {
+    background-color: #000000a6;
+    padding: 10px;
+    font-family: 'MADE Evolve Sans Bold', sans-serif;
+    font-size: 0.7em;
+    border-radius: 10px;
+    margin: 5px;
+    animation: slideIn 1s ease-in-out;
+}
+
+img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    animation: float 10s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1); /* Start at the normal position and size */
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05); /* Float up and scale up slightly */
+    }
+    100% {
+        transform: translateY(0) scale(1); /* Return to the normal position and size */
+    }
+}
+
+/* Cracker animation */
+@keyframes confetti-fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 1;
+    }
+  }
+  
+  .confetti {
+    position: fixed;
+    background-color: #f0a202; /* Confetti color */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: confetti-fall 3s linear infinite;
+  }
+  
+  /* Add more styles for confetti, such as color variations or different shapes if needed. */
+  
+
+/* Star animation */
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #FFFFFF; /* Star color */
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 1s infinite;
+}
+
+/* Adjust the star properties as needed */
+
+#typewriter {
+    overflow: hidden; /* Hide the overflow content */
+    border-right: .15em solid orange; /* Add a blinking cursor */
+    white-space: nowrap; /* Make the text appear on a single line */
+    margin: 0 auto;
+    letter-spacing: .15em; /* Adjust the spacing between letters */
+    animation: typing 10s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
