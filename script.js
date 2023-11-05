@@ -1,5 +1,14 @@
 const birthday = new Date("2002-11-07T00:00:00");
 
+// Function to trigger the Easter egg
+function triggerEasterEgg() {
+    // Get the hidden link element
+    const easterEggLink = document.getElementById("easter-egg-link");
+    
+    // Simulate a click on the hidden link
+    easterEggLink.click();
+  }
+
 // Countdown
 let timer = setInterval(function() {
     // Get today's date
@@ -22,6 +31,8 @@ let timer = setInterval(function() {
          <div class="seconds"><div class="numbers">${seconds}</div>seconds</div>`;
 
 }, 1000);
+
+const targetDate = new Date("2023-05-11T00:00:00"); // May 11, 2023
 
 function displayMotivationalQuote() {
     const quotes = [
